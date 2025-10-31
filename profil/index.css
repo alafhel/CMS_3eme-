@@ -1,0 +1,38 @@
+:root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#22c55e;--accent-2:#60a5fa;--glass:rgba(255,255,255,0.03);--radius:14px;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,#071025 0%,#0b1220 60%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:28px}
+.container{width:100%;max-width:1100px;display:grid;grid-template-columns:360px 1fr;gap:20px}
+.profile-card{background:var(--glass);padding:22px;border-radius:var(--radius)}
+.avatar{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent-2),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;color:white}
+.name{margin-top:12px;font-size:18px;font-weight:700}
+.email{color:var(--muted);font-size:13px;margin-top:4px}
+.balance-card{background:#071827;padding:14px;border-radius:10px;margin-top:18px}
+.label{font-size:12px;color:var(--muted)}
+.big{font-size:22px;font-weight:700;margin-top:6px}
+.small-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.s-card{background:var(--glass);padding:10px;border-radius:10px}
+.s-card .val{font-weight:700;font-size:16px}
+.s-card .sub{font-size:12px;color:var(--muted)}
+.actions-set{margin-top:12px;display:flex;gap:8px;justify-content:space-between}
+.btn{background:linear-gradient(180deg,var(--accent-2),#2563eb);padding:10px 14px;border-radius:10px;border:0;color:white;font-weight:700;cursor:pointer}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted);cursor:pointer}
+.main-card{background:var(--glass);padding:22px;border-radius:var(--radius)}
+.row{display:flex;align-items:center;justify-content:space-between}
+.table,th,td{border-collapse:collapse}
+th,td{padding:12px 10px;text-align:left;font-size:14px}
+th{color:var(--muted);font-weight:600;font-size:12px}
+tr{border-bottom:1px solid rgba(255,255,255,0.03)}
+.asset-name{display:flex;align-items:center;gap:10px}
+.coin{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.coin-btc{background:linear-gradient(135deg,#f59e0b,#b45309);color:#0b1220}
+.coin-eth{background:linear-gradient(135deg,#a78bfa,#7c3aed);color:white}
+.coin-usdt{background:linear-gradient(135deg,#34d399,#059669);color:#05271a}
+.positive{color:#86efac;font-weight:700}
+.negative{color:#fb7185;font-weight:700}
+.modal-backdrop{position:fixed;inset:0;background:rgba(3,7,18,0.6);display:flex;align-items:center;justify-content:center}
+.modal{background:#081425;padding:20px;border-radius:12px;width:380px}
+.field{display:flex;flex-direction:column;margin-top:10px}
+.field input,.field select{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.actions{display:flex;gap:12px}
+.note{font-size:12px;color:var(--muted);margin-top:14px}
+@media(max-width:900px){.container{grid-template-columns:1fr}}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Profil Crypto — Portefeuille</title>
+<link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+<div class="container">
+<aside class="profile-card">
+<div style="display:flex;gap:12px;align-items:center">
+<div class="avatar">AM</div>
+<div>
+<div class="name">Adil Lafhel</div>
+<div class="email">jean@example.com</div>
+</div>
+</div>
+<div class="summary">
+<div class="balance-card">
+<div class="label">Solde total estimé</div>
+<div class="big" id="total-portfolio">0,00 €</div>
+</div>
+<div class="small-grid">
+<div class="s-card">
+<div class="sub">Disponible</div>
+<div class="val" id="available-amt">0,00 €</div>
+</div>
+<div class="s-card">
+<div class="sub">Investi</div>
+<div class="val" id="invested-amt">0,00 €</div>
+</div>
+</div>
+<div class="actions-set">
+<button class="btn" id="addFundsBtn">Ajouter de l'argent</button>
+<button class="ghost" id="withdrawBtn">Retirer</button>
+</div>
+<div class="note">Simulation — aucun transfert réel.</div>
+</div>
+</aside>
+
+
+<main class="main-card">
+<div class="row">
+<div class="portfolio">
+<div>
+<div class="total">Portefeuille</div>
+<div class="total-amt" id="total-amt-main">0,00 €</div>
+</div>
+</div>
+<div class="actions">
+<button class="ghost" id="refreshBtn">Actualiser</button>
+<button class="btn" id="quickAddBtn">+ 100 € (test)</button>
+</div>
+</div>
+
+
+<section class="assets-section">
+<h3>Actifs</h3>
+<table>
+<thead>
+<tr>
+<th>Crypto</th><th>Montant</th><th>Prix unitaire</th><th>Valeur (€)</th><th>Variation 24h</th>
+</tr>
+</thead>
+<tbody id="assetsTable"></tbody>
+</table>
+</section>
+
+
+<section class="tx-list">
+<h4>Historique</h4>
+<div id="txList"></div>
+</section>
+</main>
+</div>
+
+
+<div id="modalBackdrop" style="display:none" class="modal-backdrop">
+<div class="modal">
+<h3>Ajouter des fonds</h3>
+<div class="field">
+<label>Devise</label>
+<select id="currencySelect">
+<option value="EUR">EUR</option>
+<option value="BTC">BTC</option>
+<option value="ETH">ETH</option>
+<option value="USDT">USDT</option>
+</select>
+</div>
+<div class="field">
+<label>Montant</label>
+<input id="amountInput" type="number" min="0" step="any" placeholder="Ex. 100" />
+</div>
+		<div class="field">
+			<label>Cible</label>
+			<select id="targetAsset">
+				<option value="AVAILABLE">Disponible</option>
+				<option value="BTC">BTC</option>
+				<option value="ETH">ETH</option>
+				<option value="USDT">USDT</option>
+			</select>
+		</div>
+		<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:14px">
+			<button id="cancelModal" class="ghost">Annuler</button>
+			<button id="confirmAdd" class="btn">Confirmer</button>
+		</div>
+</html>
+
+<script src="./index.js"></script>
+</body>
+</html>
