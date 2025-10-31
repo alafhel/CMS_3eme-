@@ -1,0 +1,78 @@
+<body>
+    // ...existing code...
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Connexion</title>
+    <style>
+        :root{
+            --bg:#f5f7fb;
+            --card:#ffffff;
+            --accent:#3b82f6;
+            --muted:#6b7280;
+            --danger:#ef4444;
+            font-family:Inter, system-ui, Arial, sans-serif;
+        }
+        html,body{height:100%;margin:0;background:var(--bg);color:#111}
+        .wrap{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:24px;
+        }
+        .card{
+            width:100%;
+            max-width:420px;
+            background:var(--card);
+            border-radius:12px;
+            box-shadow:0 6px 30px rgba(16,24,40,0.08);
+            padding:28px;
+        }
+        h1{margin:0 0 8px;font-size:20px}
+        p.lead{margin:0 0 18px;color:var(--muted);font-size:14px}
+        .field{margin-bottom:14px}
+        label{display:block;font-size:13px;margin-bottom:6px;color:#111;font-weight:600}
+        input[type="email"],
+        input[type="password"]{
+            width:100%;
+            padding:10px 12px;
+            border-radius:8px;
+            border:1px solid #e6e9ef;
+            background:#fff;
+            font-size:14px;
+            box-sizing:border-box;
+        }
+        .row{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:10px;
+        }
+        .actions{display:flex;align-items:center;gap:8px;margin-top:12px}
+        button.primary{
+            background:var(--accent);
+            color:#fff;
+            border:0;
+            padding:10px 14px;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:600;
+        }
+        button.primary:disabled{opacity:0.6;cursor:not-allowed}
+        .muted{color:var(--muted);font-size:13px}
+        .small{font-size:13px}
+        .error{color:var(--danger);font-size:13px;margin-top:6px}
+        .show-pass{
+            background:transparent;border:0;color:var(--accent);font-weight:600;cursor:pointer;padding:6px 8px;border-radius:6px;
+        }
+        @media (max-width:480px){
+            .card{padding:18px;border-radius:10px}
+        }
+        body{
+            color: aqua;
+        }
+       
+    </style>
