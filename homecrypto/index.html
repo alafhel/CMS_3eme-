@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <h1>Page Crypto</h1>
+    // ...existing code...
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crypto Dashboard</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="#" alt="" aria-hidden="true" class="logo"/>
+      <span>Crypto UI</span>
+    </div>
+    <div class="header-actions">
+      <button id="connectBtn" class="btn ghost">Se connecter</button>
+      <button id="themeBtn" class="btn">Mode sombre</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="balance-card glass">
+        <div class="balance-top">
+          <div>
+            <div class="title">Portefeuille</div>
+            <div class="subtitle">Solde total estimé</div>
+          </div>
+          <button id="addFunds" class="btn primary">Ajouter des fonds</button>
+        </div>
+        <div class="balance-amount">€ <span id="totalBalance">0.00</span></div>
+        <div class="small muted">Dernière mise à jour : <span id="lastUpdate">--</span></div>
+      </div>
+
+      <div class="market-overview glass">
+        <h3>Marchés</h3>
+        <div id="tickers" class="tickers"></div>
+      </div>
+    </section>
+
+    <section class="market-details glass">
+      <div class="market-header">
+        <h3 id="selectedTitle">Bitcoin (BTC)</h3>
+        <div class="market-actions">
+          <button id="buyBtn" class="btn primary">Acheter</button>
+          <button id="sellBtn" class="btn ghost">Vendre</button>
+        </div>
+      </div>
+
+      <div class="market-body">
+        <div class="chart-card">
+          <canvas id="sparkline" width="600" height="200"></canvas>
+        </div>
+        <div class="info-panel">
+          <div class="info-row"><span>Prix</span><strong id="selPrice">-</strong></div>
+          <div class="info-row"><span>Variation 24h</span><strong id="selChange">-</strong></div>
+          <div class="info-row"><span>Volume 24h</span><strong id="selVol">-</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal simple -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-panel glass">
+      <h4 id="modalTitle">Acheter</h4>
+      <label>Montant en EUR
+        <input type="number" id="payAmount" min="1" step="0.01" placeholder="50.00">
+      </label>
+      <div class="modal-actions">
+        <button id="confirmPay" class="btn primary">Confirmer</button>
+        <button id="closeModal" class="btn ghost">Annuler</button>
+      </div>
+      <div id="modalMsg" class="muted small"></div>
+    </div>
+  </div>
+
+  <footer class="footer muted">Données : CoinGecko API • Exemples pour démonstration</footer>
+
+// ...existing code...
+  <div class="modal-actions">
+    <button id="confirmPay" class="btn primary">Confirmer</button>
+    <button id="closeModal" class="btn ghost">Annuler</button>
++   <button id="closeAndHome" class="btn ghost">Annuler et accueil</button>
+  </div>
+// ...existing code...
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

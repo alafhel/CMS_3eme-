@@ -1,0 +1,75 @@
+/* ...existing code... */
+:root{
+  --bg:#0f1724;
+  --card:rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.04);
+  --accent:#7c3aed;
+  --accent-2:#06b6d4;
+  --muted:#9aa4b2;
+  --success:#10b981;
+  --danger:#ef4444;
+  --glass-border: rgba(255,255,255,0.06);
+  --card-radius:14px;
+  color-scheme: dark;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:
+  radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
+  radial-gradient(1000px 500px at 90% 90%, rgba(6,182,212,0.06), transparent),
+  var(--bg);
+  color:#e6eef8;
+}
+.container{max-width:1100px;margin:36px auto;padding:20px;display:grid;grid-template-columns:1fr;gap:18px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}
+.logo{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:8px}
+.header-actions{display:flex;gap:8px}
+.btn{padding:8px 12px;border-radius:10px;border:1px solid transparent;background:transparent;color:inherit;cursor:pointer;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071025;border:0}
+.btn.ghost{background:transparent;border:1px solid var(--glass-border);color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:0.85rem}
+
+/* cards */
+.glass{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(8px);border-radius:var(--card-radius);padding:16px;border:1px solid var(--glass-border)}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+.balance-card .balance-amount{font-size:28px;font-weight:800;margin-top:12px}
+.balance-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.market-overview h3{margin:0 0 10px 0}
+.tickers{display:flex;flex-direction:column;gap:10px}
+.ticker{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);cursor:pointer;border:1px solid rgba(255,255,255,0.02)}
+.ticker:hover{transform:translateY(-3px);transition:transform .18s}
+.ticker .left{display:flex;align-items:center;gap:12px}
+.coin-badge{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700}
+.coin-name{font-weight:700}
+.coin-sub{font-size:0.85rem;color:var(--muted)}
+
+/* Market details */
+.market-details{padding:16px}
+.market-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.market-body{display:flex;gap:14px;align-items:flex-start}
+.chart-card{flex:1;background:transparent;padding:6px;border-radius:10px}
+.info-panel{width:260px;display:flex;flex-direction:column;gap:10px}
+.info-row{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:10px;border-radius:8px}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.6));backdrop-filter:blur(4px)}
+.modal-panel{width:360px;padding:18px;border-radius:12px}
+.modal-panel input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;margin-top:8px}
+
+/* footer */
+.footer{text-align:center;margin:18px;color:var(--muted)}
+
+/* responsive */
+@media (max-width:940px){
+  .hero{grid-template-columns:1fr}
+  .market-details{order:3}
+  .container{padding:12px}
+}
+@media (max-width:520px){
+  .market-body{flex-direction:column}
+  .info-panel{width:100%}
+}
